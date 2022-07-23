@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SecuroServ</string>
+
+    <string name="error_name">Name can not be empty</string>
+    <string name="error_email">Email can not be empty</string>
+    <string name="error_invalid_email">Invalid Email</string>
+    <string name="error_pass">Password can not be empty</string>
+    <string name="error_pass_length">Password must contain at least 6 characters</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="no_internet">No Internet Connection</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
