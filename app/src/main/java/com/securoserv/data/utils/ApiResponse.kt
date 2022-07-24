@@ -1,4 +1,4 @@
-package com.securoserv.data.model
+package com.securoserv.data.utils
 
 import com.google.gson.annotations.SerializedName
 
@@ -9,4 +9,6 @@ data class ApiResponse<T>(
     val success: Boolean,
     @SerializedName("data")
     val data: T?,
+    @SerializedName("error")
+    val error: ErrorResponse?
 )

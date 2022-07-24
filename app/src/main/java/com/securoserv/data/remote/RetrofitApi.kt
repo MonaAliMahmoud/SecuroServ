@@ -1,6 +1,6 @@
 package com.securoserv.data.remote
 
-import com.securoserv.data.model.ApiResponse
+import com.securoserv.data.utils.ApiResponse
 import com.securoserv.data.model.LoginData
 import com.securoserv.data.model.UserData
 import retrofit2.Call
