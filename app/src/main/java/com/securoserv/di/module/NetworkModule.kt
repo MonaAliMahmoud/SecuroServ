@@ -77,7 +77,7 @@ class NetworkModule {
         rxAdapter: RxErrorHandlingCallAdapterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("BuildConfig.BASE_URL")
+            .baseUrl("https://securoServ.sa/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(rxAdapter)
             .client(okHttpClient)

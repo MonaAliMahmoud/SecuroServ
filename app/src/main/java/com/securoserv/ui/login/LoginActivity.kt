@@ -12,7 +12,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
-import com.securoserv.MainActivity
+import com.securoserv.ui.MainActivity
 import com.securoserv.R
 import com.securoserv.ui.signup.SignUpActivity
 import com.securoserv.utils.hideSoftKeyboard

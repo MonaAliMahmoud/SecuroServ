@@ -2,10 +2,7 @@ package com.securoserv.di.component
 
 import android.app.Application
 import com.securoserv.application.AppInstance
-import com.securoserv.di.module.ActivityModule
-import com.securoserv.di.module.AppModule
-import com.securoserv.di.module.NetworkModule
-import com.securoserv.di.module.ViewModelModule
+import com.securoserv.di.module.*
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -16,6 +13,7 @@ import javax.inject.Singleton
     modules = [
         AndroidInjectionModule::class,
         ViewModelModule::class,
+        RepositoryModule::class,
         AppModule::class,
         ActivityModule::class,
         NetworkModule::class

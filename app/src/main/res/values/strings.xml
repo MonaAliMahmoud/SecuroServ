@@ -10,6 +10,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="no_internet">No Internet Connection</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="notUser">Not Register as a user</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

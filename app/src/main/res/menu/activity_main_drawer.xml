@@ -7,19 +7,22 @@
 
         <item
             android:id="@+id/home"
-            android:icon="@drawable/ic_menu"
+            android:icon="@drawable/ic_home"
             android:title="Home" />
 
         <item
             android:id="@+id/live_stream"
+            android:icon="@drawable/ic_live"
             android:title="Live Stream" />
 
         <item
             android:id="@+id/recorded_videos"
+            android:icon="@drawable/ic_record"
             android:title="Recorded Videos" />
 
         <item
             android:id="@+id/saved_events"
+            android:icon="@drawable/ic_saved"
             android:title="Saved Events" />
 
         <item

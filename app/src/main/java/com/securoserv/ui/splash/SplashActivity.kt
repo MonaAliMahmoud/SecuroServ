@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import com.securoserv.MainActivity
+import com.securoserv.ui.MainActivity
 import com.securoserv.R
 import com.securoserv.ui.login.LoginActivity
 
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed({
 
-            if (isLogin) {
+            if (!isLogin) {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {

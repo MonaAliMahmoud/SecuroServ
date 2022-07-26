@@ -5,6 +5,6 @@ import com.securoserv.ui.base.BaseViewModel
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    loginRepository: HomeRepository,
+    homeRepository: HomeRepository,
     schedulerProvider: SchedulerProvider
-) : BaseViewModel<HomeRepository>(loginRepository, schedulerProvider)
+) : BaseViewModel<HomeRepository>(homeRepository, schedulerProvider)

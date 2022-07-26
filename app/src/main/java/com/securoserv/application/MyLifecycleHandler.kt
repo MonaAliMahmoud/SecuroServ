@@ -5,12 +5,20 @@ import android.app.ActivityManager
 import android.app.Application
 import android.content.Context
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import com.securoserv.di.helper.Injectable
+import dagger.android.AndroidInjection
+import dagger.android.HasAndroidInjector
+import dagger.android.support.AndroidSupportInjection
 import java.util.*
 
 open class MyLifecycleHandler : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         created++
+        handleActivity(activity)
     }
 
     override fun onActivityDestroyed(activity: Activity) {
@@ -35,6 +43,32 @@ open class MyLifecycleHandler : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityStopped(activity: Activity) {
         ++stopped
+    }
+
+
+    private fun handleActivity(activity: Activity) {
+        if (activity is HasAndroidInjector) {
+            AndroidInjection.inject(activity)
+        }
+        if (activity is FragmentActivity) {
+            activity.supportFragmentManager.registerFragmentLifecycleCallbacks(
+                object : FragmentManager.FragmentLifecycleCallbacks() {
+
+                    override fun onFragmentAttached(
+                        fm: FragmentManager,
+                        f: Fragment,
+                        context: Context
+                    ) {
+                        if (f is Injectable) {
+                            AndroidSupportInjection.inject(f)
+                        }
+
+                        super.onFragmentAttached(fm, f, context)
+                    }
+
+                }, true
+            )
+        }
     }
 
     companion object {
@@ -76,5 +110,8 @@ open class MyLifecycleHandler : Application.ActivityLifecycleCallbacks {
             }
             return false
         }
+
+        fun isLastOne() = created == 1
+
     }
 }
